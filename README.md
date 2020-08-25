@@ -1,6 +1,7 @@
 # Universal rule-based machine translation toolkit
 A tool for translating text from source grammar to target grammar (context-free) with corresponding dictionary.
 
+[![CircleCI](https://circleci.com/gh/patrickphat/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/patrickphat/urbamt/tree/master)
 
 ## Installation
 ```bash
@@ -18,17 +19,12 @@ src_sentences = ["I go to a good school", "I go to a cool school"]
 src_grammar = """
                 S -> NP VP
                 NP -> PRP
-                VP -> VB PP
-                PP -> PB NP
-                NP -> CD NP1
-                NP1 -> JJ NN
+                VP -> VB NP
+                NP -> JJ NN
                 PRP -> 'I'
-                VB -> 'go'
-                PB -> 'to'
-                CD -> 'a'
-                JJ -> 'good'
-                NN -> 'school'
-                JJ -> 'cool'
+                VB -> 'love' | 'hate'
+                JJ -> 'good' | 'bad'
+                NN -> 'dogs'
                 """
 
 # Some edit within source grammar to target grammar
@@ -39,13 +35,12 @@ src_to_target_grammar =  {
 # Word-by-word dictionary from source language to target language
 en_to_vi_dict = {
     "I":"tôi",
-    "go":"đi",
-    "to":"tới",
-    "a":"một",
-    "good":"tốt",
-    "school":"ngôi_trường",
-    "cool":"ngầu"
-        }
+    "love":"yêu",
+    "hate":"ghét",
+    "dogs":"những chú_chó",
+    "good":"ngoan",
+    "bad":"hư"
+    }
 
 translator = Translator(src_grammar = src_grammar,
                             src_to_tgt_grammar = src_to_target_grammar,
