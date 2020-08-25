@@ -5,7 +5,7 @@
 
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
-[![CircleCI](https://circleci.com/gh/urbamt/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/urbamt/urbamt/tree/master)
+[![CircleCI](https://circleci.com/gh/urbamt/urbamt/tree/master.svg?style=shield)](https://circleci.com/gh/urbamt/urbamt/tree/master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbamt/urbamt/blob/master/LICENSE)
 [![PyPI version](https://badge.fury.io/py/urbamt.svg)](https://badge.fury.io/py/urbamt)
 
@@ -13,7 +13,7 @@
 
 ## Installation
 ```bash
-pip install 'urbamt@git+ssh://git@github.com/patrick/urbamt.git@master'
+pip install urbamt
 ```
 
 ## Usage
