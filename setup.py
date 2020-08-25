@@ -11,7 +11,7 @@ setuptools.setup(
      description="Universal Rule-based Machine Translation Toolkit (URBaMT)",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     url="https://github.com/patrickphat/urbamt",
+     url="https://github.com/urbamt/urbamt",
      packages=setuptools.find_packages(exclude=['docs', 'tests']),
      classifiers=[
          "Programming Language :: Python :: 3",
