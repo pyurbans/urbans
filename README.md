@@ -1,7 +1,7 @@
 # Universal Rule-Based Machine Translation toolkit (URBaMT)
 A tool for translating text from source grammar to target grammar (context-free) with corresponding dictionary. 
 
-❓ Why not translate yourself when google cannot satify you?
+Why not translate yourself when Google Translate cannot satify you❓
 
 [![CircleCI](https://circleci.com/gh/patrickphat/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/patrickphat/urbamt/tree/master)
 
