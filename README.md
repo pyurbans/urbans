@@ -56,8 +56,8 @@ trans_sentences = translator.translate(src_sentences)
 # This should returns ['tôi yêu những chú_chó ngoan', 'tôi ghét những chú_chó hư']
 ```
 
-## LICENSE
-This repository is using the Apache 2.0 license that is listed in the repo. Please take a lot as you wish.
+## License
+This repository is using the Apache 2.0 license that is listed in the repo. Please take at [`LICENSE`](https://github.com/urbamt/urbamt/blob/master/LICENSE) look as you wish.
 
 ## BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
