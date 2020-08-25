@@ -13,7 +13,7 @@ pip install 'urbamt@git+ssh://git@github.com/patrick/urbamt.git@master'
 from urbamt import Translator
 
 # Source sentence to be translated
-src_sentences = ["I go to a good school", "I go to a cool school"]
+src_sentences = ["I love good dogs", "I hate bad dogs"]
 
 # Source grammar in nltk parsing style
 src_grammar = """
