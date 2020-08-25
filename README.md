@@ -5,8 +5,7 @@
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
 [![CircleCI](https://circleci.com/gh/patrickphat/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/patrickphat/urbamt/tree/master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/patrickphat/urbamt/blob/master/LICENSE)
-
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/patrickphat/urbamt/blob/master/LICENSE)
 
 </div>
 
