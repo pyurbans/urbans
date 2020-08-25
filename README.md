@@ -57,7 +57,7 @@ trans_sentences = translator.translate(src_sentences)
 ```
 
 ## License
-This repository is using the Apache 2.0 license that is listed in the repo. Please take at [`LICENSE`](https://github.com/urbamt/urbamt/blob/master/LICENSE) look as you wish.
+This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/urbamt/urbamt/blob/master/LICENSE) as you wish.
 
 ## BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
