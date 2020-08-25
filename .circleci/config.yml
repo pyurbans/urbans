@@ -8,8 +8,7 @@ executors:
     resource_class: medium
 
 commands:
-  test_urbamt:
-    
+  install_test_translation:
     parameters:
       model_name:
         type: string
@@ -28,7 +27,7 @@ jobs:
   test_urbamt:
     executor: python36-docker
     steps:
-      -  test_urbamt:
+      -  install_test_translation
 
 workflows:
   # Name the workflow "welcome"
