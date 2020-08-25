@@ -12,7 +12,7 @@ setuptools.setup(
      long_description=long_description,
      long_description_content_type="text/markdown",
      url="https://github.com/patrickphat/urbamt",
-     packages=setuptools.find_packages(),
+     packages=setuptools.find_packages(exclude=['docs', 'tests']),
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
