@@ -11,9 +11,6 @@
 [![GitHub version](https://badge.fury.io/gh/urbamt%2Furbamt.svg)](https://github.com/urbamt/urbamt)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbamt/urbamt/graphs/commit-activity)
-[![HitCount](http://hits.dwyl.com/urbamt/urbamt.svg)](http://hits.dwyl.com/urbamt/urbamt)
-
-
 
 </div>
 
