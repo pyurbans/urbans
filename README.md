@@ -8,6 +8,12 @@
 [![CircleCI](https://circleci.com/gh/urbamt/urbamt/tree/master.svg?style=shield)](https://circleci.com/gh/urbamt/urbamt/tree/master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbamt/urbamt/blob/master/LICENSE)
 [![PyPI version](https://badge.fury.io/py/urbamt.svg)](https://badge.fury.io/py/urbamt)
+[![GitHub version](https://badge.fury.io/gh/urbamt%2Furbamt.svg)](https://github.com/urbamt/urbamt)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbamt/urbamt/graphs/commit-activity)
+[![HitCount](http://hits.dwyl.com/urbamt/urbamt.svg)](http://hits.dwyl.com/urbamt/urbamt)
+
+
 
 </div>
 
