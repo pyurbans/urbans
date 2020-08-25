@@ -9,9 +9,6 @@ executors:
 
 commands:
   install_test_translation:
-    parameters:
-      model_name:
-        type: string
     steps:
       - checkout
       - run:
