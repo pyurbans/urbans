@@ -29,7 +29,7 @@ src_grammar = """
 
 # Some edit within source grammar to target grammar
 src_to_target_grammar =  {
-    "NP1 -> JJ NN": "NP1 -> NN JJ" # in Vietnamese NN goes before JJ
+    "NP -> JJ NN": "NP -> NN JJ" # in Vietnamese NN goes before JJ
 }
 
 # Word-by-word dictionary from source language to target language
