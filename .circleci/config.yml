@@ -20,7 +20,7 @@ commands:
           command: |
             pip install .[dev]
       - run:
-          name:"Test"
+          name: "Test translation"
           command: |
             pytest tests/test_en_to_vi.py
       
