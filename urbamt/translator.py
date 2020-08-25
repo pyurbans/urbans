@@ -1,6 +1,6 @@
 from typing import Dict, List
-from .utils.tree_manipulation import translate_tree_grammar
-from .utils.misc import remove_trailing_space
+from utils.tree_manipulation import translate_tree_grammar
+from utils.misc import remove_trailing_space
 import nltk 
 from nltk import RecursiveDescentParser as Parser
 
