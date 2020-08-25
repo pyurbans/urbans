@@ -9,7 +9,7 @@ pip install 'urbamt@git+ssh://git@github.com/patrick/urbamt.git@master'
 ```
 
 ## Usage
-```
+```python
 from urbamt import Translator
 
 # Source sentence to be translated
