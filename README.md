@@ -4,8 +4,8 @@
 **A tool for translating text from source grammar to target grammar (context-free) with corresponding dictionary.**
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
-[![CircleCI](https://circleci.com/gh/patrickphat/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/patrickphat/urbamt/tree/master)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/patrickphat/urbamt/blob/master/LICENSE)
+[![CircleCI](https://circleci.com/gh/urbamt/urbamt/tree/master.svg?style=svg)](https://circleci.com/gh/urbamt/urbamt/tree/master)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbamt/urbamt/blob/master/LICENSE)
 
 </div>
 
@@ -54,4 +54,22 @@ translator = Translator(src_grammar = src_grammar,
 
 trans_sentences = translator.translate(src_sentences) 
 # This should returns ['tôi yêu những chú_chó ngoan', 'tôi ghét những chú_chó hư']
+```
+
+## Contributors:
+- Patrick Phat Nguyen
+
+## LICENSE
+This repo is using the Apache 2.0 license that is listed in the repository. Please take a lot as you wish.
+
+## BibTeX
+If you wish to cite the framework feel free to use this (but only if you loved it 😊):
+```bibtex
+@article{phat@urbamt,
+  title={Universal Rule-Based Machine Translation toolkit (URBaMT)},
+  author={Patrick Phat, VN},
+  journal={GitHub. Note: https://github.com/urbamt/urbamt Cited by},
+  volume={3},
+  year={2020}
+}
 ```
