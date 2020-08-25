@@ -65,7 +65,7 @@ This repo is using the Apache 2.0 license that is listed in the repository. Plea
 ## BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
 ```bibtex
-@article{phat@urbamt,
+@article{phat2020urbamt,
   title={Universal Rule-Based Machine Translation toolkit (URBaMT)},
   author={Patrick Phat, VN},
   journal={GitHub. Note: https://github.com/urbamt/urbamt Cited by},
