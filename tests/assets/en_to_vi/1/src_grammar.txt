@@ -1,0 +1,13 @@
+S -> NP VP
+NP -> PRP
+VP -> VB PP
+PP -> PB NP
+NP -> CD NP1
+NP1 -> JJ NN
+PRP -> 'I'
+VB -> 'go'
+PB -> 'to'
+CD -> 'a'
+JJ -> 'good'
+NN -> 'school'
+JJ -> 'cool'
