@@ -64,8 +64,7 @@ class URBAMT_Translator:
             List[str]: A list of translated sentences
         """
         if isinstance(sentences,str):
-            texts = [sentences]
-
+            sentences = [sentences]
 
         translated_sentence = []
         for sentence in sentences:

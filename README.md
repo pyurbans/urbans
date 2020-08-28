@@ -69,7 +69,7 @@ If you wish to cite the framework feel free to use this (but only if you loved i
 ```bibtex
 @misc{phat2020urbamt,
   author = {Patrick Phat},
-  title = {Universal Rule-Based Machine Translation toolkit (URBaMT)},
+  title = {URBaMT: Universal Rule-Based Machine Translation toolkit},
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
