@@ -23,12 +23,9 @@ commands:
           command: |
             coverage run -m pytest tests/test_en_to_vi.py
             coverage xml -o "cobertura.xml"
-      - run:
-          name: "Send coverage report"
-          command: |
-            coverage-reporter/send_report:
-              coverage-reports: 'cobertura.xml'
-              project-token: $CODACY_PROJECT_TOKEN
+      - coverage-reporter/send_report:
+          coverage-reports: 'cobertura.xml'
+          project-token: $CODACY_PROJECT_TOKEN
 
       
 jobs:
