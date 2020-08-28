@@ -1,6 +1,9 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs:
+  coverage-reporter: codacy/coverage-reporter@11.2.2
+
 executors:
   python36-docker:
     docker:
@@ -8,7 +11,7 @@ executors:
     resource_class: medium
 
 commands:
-  install_test_translation:
+  setup_test_translation_under_coverage:
     steps:
       - checkout
       - run:
@@ -16,15 +19,23 @@ commands:
           command: |
             pip install .[dev]
       - run:
-          name: "Test translation"
+          name: "Test translation under coverage"
           command: |
-            pytest tests/test_en_to_vi.py
+            coverage run -m pytest tests/test_en_to_vi.py
+
+      - run:
+          name: "Send coverage report"
+          command: |
+            coverage-reporter/send_report:
+              coverage-reports: 'report.xml,coverage.info'
+              project-token: $CODACY_PROJECT_TOKEN
+
       
 jobs:
   test_urbamt:
     executor: python36-docker
     steps:
-      -  install_test_translation
+      -  setup_test_translation_under_coverage
 
 workflows:
   # Name the workflow "welcome"
