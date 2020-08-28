@@ -22,12 +22,13 @@ commands:
           name: "Test translation under coverage"
           command: |
             coverage run -m pytest tests/test_en_to_vi.py
+            converage xml
 
       - run:
           name: "Send coverage report"
           command: |
             coverage-reporter/send_report:
-              coverage-reports: 'cobertura.xml'
+              coverage-reports: 'coverage.xml'
               project-token: $CODACY_PROJECT_TOKEN
 
       
