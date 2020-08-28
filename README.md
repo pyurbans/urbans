@@ -10,6 +10,7 @@
 [![PyPI version](https://badge.fury.io/py/urbamt.svg)](https://badge.fury.io/py/urbamt)
 [![GitHub release](https://img.shields.io/github/release/urbamt/urbamt.svg)](https://GitHub.com/urbamt/urbamt/releases/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbamt/urbamt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=urbamt/urbamt&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbamt/urbamt?utm_source=github.com&utm_medium=referral&utm_content=urbamt/urbamt&utm_campaign=Badge_Coverage)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbamt/urbamt/graphs/commit-activity)
 
 </div>
