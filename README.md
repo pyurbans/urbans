@@ -5,6 +5,7 @@
 
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4fa8d013ed9c47ba98de50f4ffb15494)](https://app.codacy.com/gh/urbamt/urbamt?utm_source=github.com&utm_medium=referral&utm_content=urbamt/urbamt&utm_campaign=Badge_Grade_Settings)
 [![CircleCI](https://circleci.com/gh/urbamt/urbamt/tree/master.svg?style=shield)](https://circleci.com/gh/urbamt/urbamt/tree/master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbamt/urbamt/blob/master/LICENSE)
 [![PyPI version](https://badge.fury.io/py/urbamt.svg)](https://badge.fury.io/py/urbamt)
