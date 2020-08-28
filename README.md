@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbamt/urbamt/blob/master/LICENSE)
 [![PyPI version](https://badge.fury.io/py/urbamt.svg)](https://badge.fury.io/py/urbamt)
 [![GitHub release](https://img.shields.io/github/release/urbamt/urbamt.svg)](https://GitHub.com/urbamt/urbamt/releases/)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbamt/urbamt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=urbamt/urbamt&amp;utm_campaign=Badge_Grade)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbamt/urbamt/graphs/commit-activity)
 
 </div>
