@@ -22,7 +22,7 @@ commands:
           name: "Test translation under coverage"
           command: |
             coverage run -m pytest tests/test_en_to_vi.py
-            converage xml
+            coverage xml
 
       - run:
           name: "Send coverage report"
