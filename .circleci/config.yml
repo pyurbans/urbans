@@ -35,7 +35,7 @@ jobs:
   test_urbamt:
     executor: python36-docker
     steps:
-      -  setup_test_translation_under_coverage
+      - setup_test_translation_under_coverage
 
 workflows:
   # Name the workflow "welcome"
