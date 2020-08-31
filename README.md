@@ -1,6 +1,6 @@
 <div align="center">
 
-# URBaMT: Universal Rule-Based Machine Translation toolkit 
+# URBaMT: Universal Rule-based Machine Translation toolkit 
 **A tool for translating text from source grammar to target grammar (context-free) with corresponding dictionary.**
 
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
