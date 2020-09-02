@@ -61,6 +61,7 @@ class URBAMT_Translator:
 
         translated_sentences = []
         failed_sentences = []
+        
         for sentence in sentences:
             sentence = self.__process_text_input(sentence)
             trees = self.parser.parse(sentence.split())
