@@ -70,7 +70,7 @@ class URBAMT_Translator:
 
             for t in trees:
                 translated = True
-                
+
                 # Translate grammar
                 trans_gram_sentence = translate_tree_grammar(t,self.src_to_tgt_grammar)
 
@@ -91,4 +91,4 @@ class URBAMT_Translator:
         if len(failed_sentences) > 0:
             raise ValueError(f"Please check your grammar again, failed to translated these sentence \n {failed_sentences}")
 
-        return translated_sentence
+        return translated_sentences
