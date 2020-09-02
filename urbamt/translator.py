@@ -2,7 +2,7 @@ from typing import Dict, List
 from .utils.tree_manipulation import translate_tree_grammar
 from .utils.misc import remove_trailing_space
 import nltk 
-from nltk import RecursiveDescentParser as Parser
+from nltk.parse.chart import BottomUpLeftCornerChartParser as Parser
 
 class URBAMT_Translator:
     """"""
@@ -54,7 +54,7 @@ class URBAMT_Translator:
     def __process_text_input(txt):
         return remove_trailing_space(txt)
 
-    def translate(self, sentences: List[str] or str):
+    def translate(self, sentences: List[str] or str, allow_multiple_translation = False):
         """Translate a list of sentences
 
         Args:
@@ -66,19 +66,36 @@ class URBAMT_Translator:
         if isinstance(sentences,str):
             sentences = [sentences]
 
-        translated_sentence = []
+        translated_sentences = []
+        failed_sentences = []
         for sentence in sentences:
             sentence = self.__process_text_input(sentence)
             trees = self.parser.parse(sentence.split())
 
-            for t in trees:
+            # Flag to check if there are trees in generator (grammar matched)
+            translated = False
 
+            for t in trees:
+                translated = True
+                print("hello t",t)
                 # Translate grammar
                 trans_gram_sentence = translate_tree_grammar(t,self.src_to_tgt_grammar)
 
                 # Translate words
                 trans_lang_sentence = ' '.join([self.src_to_tgt_dictionary.get(word,word) for word in trans_gram_sentence.split()])
                 
-                translated_sentence.append(trans_lang_sentence)
+                translated_sentences.append(trans_lang_sentence)
+
+                # Get 1 sentence only, will support multi sentence
+                break
+
+            if translated == False:
+                failed_sentences.append(sentence)
+
+        # String to display failed sentence
+        failed_sentences = '\n'.join(failed_sentences)
+
+        if len(failed_sentences) > 0:
+            raise ValueError(f"Please check your grammar again, failed to translated these sentence \n {failed_sentences}")
 
         return translated_sentence

@@ -75,7 +75,6 @@ def calculate_displacement(src_grammar, tgt_grammar):
     src_grammar_lst = src_grammar.split()
     tgt_grammar_lst = tgt_grammar.split()
     
-    print(src_grammar_lst.index("->"))
     src_grammar_lst = src_grammar_lst[src_grammar_lst.index("->")+1:]
     tgt_grammar_lst = tgt_grammar_lst[tgt_grammar_lst.index("->")+1:]
     displacement = []
