@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='urbamt',  
-     version='0.0.1-b2',
+     version='0.0.1-b3',
      author="Patrick Phat Nguyen",
      author_email="me@patrickphat.com",
-     description="Universal Rule-based Machine Translation Toolkit (URBaMT)",
+     description="URBaMT: Universal Rule-based Machine Translation Toolkit",
      long_description=long_description,
      long_description_content_type="text/markdown",
      url="https://github.com/urbamt/urbamt",
-     packages=setuptools.find_packages(exclude=['docs', 'tests']),
+     packages=setuptools.find_packages(exclude=['docs', 'tests', 'experiments']),
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",

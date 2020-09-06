@@ -1,5 +1,5 @@
 from typing import Dict, List
-from .utils.tree_manipulation import translate_tree_grammar
+from .utils.tree_manipulation import translate_trees_grammar
 from .utils.misc import remove_trailing_space
 import nltk 
 from nltk.parse.chart import BottomUpLeftCornerChartParser as Parser
@@ -65,27 +65,12 @@ class URBAMT_Translator:
         for sentence in sentences:
             sentence = self.__process_text_input(sentence)
             trees = self.parser.parse(sentence.split())
+            list_trees = [tree for tree in trees]
+            
+            trans_sentence = translate_trees_grammar(list_trees, self.src_to_tgt_grammar, self.src_to_tgt_dictionary)
 
-            # Flag to check if there are trees in generator (grammar matched)
-            translated = False
-
-            for t in trees:
-                translated = True
-
-                # Translate grammar
-                trans_gram_sentence = translate_tree_grammar(t,self.src_to_tgt_grammar)
-
-                # Translate words
-                trans_lang_sentence = ' '.join([self.src_to_tgt_dictionary.get(word,word) for word in trans_gram_sentence.split()])
-                
-                translated_sentences.append(trans_lang_sentence)
-
-                # Get 1 sentence only, will support multi sentence
-                break
-
-            if translated == False:
-                failed_sentences.append(sentence)
-
+            translated_sentences.append(trans_sentence)
+            
         # String to display failed sentence
         failed_sentences = '\n'.join(failed_sentences)
 

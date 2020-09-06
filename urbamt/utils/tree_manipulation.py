@@ -1,5 +1,7 @@
 import nltk
 from nltk import ParentedTree as PTree
+from typing import List
+import random
 
 def tree_to_ptree(tree: nltk.Tree):
     tree_str = tree.__str__()
@@ -13,18 +15,24 @@ def get_grammar(tree: nltk.Tree):
         grammar += f" {sub.label}"
 
 
-def swap_tree_given_left(left_tree: nltk.Tree, displacement: list):
+def swap_tree_given_left(left_tree: nltk.Tree, displacement: List[int], new_words= List[str]):
     """
     swap left node with right node within a parent node 
     """
-    
     nodes = [left_tree]
     right_tree = left_tree.right_sibling()
     parent_tree = left_tree.parent()
     
     # Get all tree pointer
-    for i in range(len(displacement)-1):
+    for disp in displacement:
+        # disp = -1 indicates that is a new word, skip
+        if disp == -1:
+            continue
         nodes.append(right_tree)
+
+        right_tree = right_tree.right_sibling()
+        if right_tree == None:
+            break
         
     # Remove all siblings and left-most self
     for node in nodes:
@@ -32,7 +40,12 @@ def swap_tree_given_left(left_tree: nltk.Tree, displacement: list):
     
     # Append with new displacement
     for disp in displacement:
-        parent_tree.append(nodes[disp])
+        # disp = -1 indicates that is a new word
+        if disp == -1:
+            new_word = PTree('NEW', [new_words.pop(0)])
+            parent_tree.append(new_word)
+        else:
+            parent_tree.append(nodes[disp])
         
     return parent_tree
     
@@ -60,16 +73,64 @@ def build_grammar_str_from_left_most(tree: nltk.Tree):
 
 
 def translate_tree_grammar(tree: nltk.Tree, grammar_substitutions: dict):
+
+    # Number of substitution done
+    num_subs = 0 
+    # Convert tree to ParentedTree
     ptree = tree_to_ptree(tree)
+
+    # Traverse through subtrees
     for sub in ptree.subtrees():
+        # Create grammar string from left-most node. E.g: NP -> JJ NP, 
+        # in this case, JJ is left-most node
         grammar_str = build_grammar_str_from_left_most(sub)
         for src_grammar, tgt_grammar in grammar_substitutions.items():
             if grammar_str == src_grammar:
-                disp = calculate_displacement(src_grammar,tgt_grammar)
-                swap_tree_given_left(sub,disp)
+                num_subs += 1
+
+                # Calculate displacement between 2 grammar strings
+                disp, new_words = calculate_displacement(src_grammar,tgt_grammar)
+
+                # Change tree nodes positions thanks to new displacement
+                swap_tree_given_left(sub, disp, new_words)
                 
     translated_grammar_sentence = " ".join(ptree.leaves())
-    return translated_grammar_sentence 
+    return translated_grammar_sentence, num_subs
+def translate_sentence_words(sentence, src_to_tgt_dictionary):
+    words_list = []
+
+    for word in sentence.split():
+        target_word = src_to_tgt_dictionary.get(word,word)
+
+        if isinstance(target_word, list):
+            target_word = random.choice(target_word)
+        
+        words_list.append(target_word)
+
+    return ' '.join(words_list)
+
+def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src_to_tgt_dictionary):
+
+    # Flag to check if there are trees in generator (grammar matched)
+    translated = False
+
+    # translated sentence map with number of grammar substitution found
+    trans_map = {} 
+
+    for tree in list_trees:
+        translated = True
+
+        # Translate grammar
+        trans_gram_sentence, num_subs = translate_tree_grammar(tree, src_to_tgt_grammar)
+
+        # Translate words
+        trans_lang_sentence = translate_sentence_words(trans_gram_sentence, src_to_tgt_dictionary)
+        
+        # Append to trans map
+        trans_map[trans_lang_sentence] = num_subs
+
+    # Return translation that has the most displacement    
+    return max(trans_map, key=trans_map.get)
 
 def calculate_displacement(src_grammar, tgt_grammar):
     src_grammar_lst = src_grammar.split()
@@ -77,7 +138,17 @@ def calculate_displacement(src_grammar, tgt_grammar):
     
     src_grammar_lst = src_grammar_lst[src_grammar_lst.index("->")+1:]
     tgt_grammar_lst = tgt_grammar_lst[tgt_grammar_lst.index("->")+1:]
+
     displacement = []
+    new_words = []
+
     for word in tgt_grammar_lst:
-        displacement.append(src_grammar_lst.index(word))
-    return displacement
+        try:
+          displacement.append(src_grammar_lst.index(word))
+        except ValueError:          
+          # Resolve  ValueError: substring not found
+          # Which indicates this is a new word
+          displacement.append(-1)
+          new_words.append(word)
+
+    return displacement, new_words
