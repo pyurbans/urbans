@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-     name='urbamt',  
+     name='urbamt',
      version='0.0.1-b3',
      author="Patrick Phat Nguyen",
      author_email="me@patrickphat.com",
