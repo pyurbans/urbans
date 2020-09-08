@@ -27,7 +27,7 @@ def swap_tree_given_left(left_tree: nltk.Tree, displacement: List[int], new_word
     # Remove all siblings and left-most self
     for node in nodes:
         parent_tree.remove(node)
-    
+
     # Append with new displacement
     for disp in displacement:
         # disp = -1 indicates that is a new word
@@ -110,7 +110,7 @@ def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src
         
         # Append to trans map
         trans_map[trans_lang_sentence] = num_subs
-    # Return translation that has the most displacement    
+    # Return translation that has the most displacement
     return max(trans_map, key=trans_map.get)
 
 def calculate_displacement(src_grammar, tgt_grammar):
