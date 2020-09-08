@@ -8,13 +8,6 @@ def tree_to_ptree(tree: nltk.Tree):
     ptree = PTree.fromstring(tree_str)
     return ptree 
 
-def get_grammar(tree: nltk.Tree):
-    grammar = f"{tree.labels()} ->"
-    parent = tree
-    for sub in subtree[0]:
-        grammar += f" {sub.label}"
-
-
 def swap_tree_given_left(left_tree: nltk.Tree, displacement: List[int], new_words= List[str]):
     """
     swap left node with right node within a parent node 

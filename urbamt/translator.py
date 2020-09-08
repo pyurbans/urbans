@@ -4,7 +4,7 @@ from .utils.misc import remove_trailing_space
 import nltk 
 from nltk.parse.chart import BottomUpLeftCornerChartParser as Parser
 
-class URBAMT_Translator:
+class Translator:
     """"""
     def __init__(self, 
                  src_grammar: str, 
