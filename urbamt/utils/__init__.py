@@ -1,3 +1,1 @@
-"""
-Utilities for tree manipulation
-"""
+"""Utilities for tree manipulation."""
