@@ -1,1 +1,3 @@
-from .translator import URBAMT_Translator as Translator
+from .translator import Translator
+
+__all__ = [Translator]
