@@ -6,23 +6,13 @@ import random
 def tree_to_ptree(tree: nltk.Tree):
     tree_str = tree.__str__()
     ptree = PTree.fromstring(tree_str)
-    return ptree 
-
-def get_grammar(tree: nltk.Tree):
-    grammar = f"{tree.labels()} ->"
-    parent = tree
-    for sub in subtree[0]:
-        grammar += f" {sub.label}"
-
+    return ptree
 
 def swap_tree_given_left(left_tree: nltk.Tree, displacement: List[int], new_words= List[str]):
-    """
-    swap left node with right node within a parent node 
-    """
+    """swap left node with right node within a parent node"""
     nodes = [left_tree]
     right_tree = left_tree.right_sibling()
     parent_tree = left_tree.parent()
-    
     # Get all tree pointer
     for disp in displacement:
         # disp = -1 indicates that is a new word, skip
@@ -52,9 +42,6 @@ def swap_tree_given_left(left_tree: nltk.Tree, displacement: List[int], new_word
 
 def build_grammar_str_from_left_most(tree: nltk.Tree):
     
-    left_label = None
-    right_label = None
-    
     left_pt = tree.left_sibling()
     right_pt = tree.right_sibling()
     parent_pt = tree.parent()
@@ -73,12 +60,11 @@ def build_grammar_str_from_left_most(tree: nltk.Tree):
 
 
 def translate_tree_grammar(tree: nltk.Tree, grammar_substitutions: dict):
-
+    """Translate tree grammar based on grammar substitution dict"""
     # Number of substitution done
     num_subs = 0 
     # Convert tree to ParentedTree
     ptree = tree_to_ptree(tree)
-
     # Traverse through subtrees
     for sub in ptree.subtrees():
         # Create grammar string from left-most node. E.g: NP -> JJ NP, 
@@ -86,16 +72,16 @@ def translate_tree_grammar(tree: nltk.Tree, grammar_substitutions: dict):
         grammar_str = build_grammar_str_from_left_most(sub)
         for src_grammar, tgt_grammar in grammar_substitutions.items():
             if grammar_str == src_grammar:
+                # Increment number of substitutions
                 num_subs += 1
-
                 # Calculate displacement between 2 grammar strings
                 disp, new_words = calculate_displacement(src_grammar,tgt_grammar)
-
                 # Change tree nodes positions thanks to new displacement
                 swap_tree_given_left(sub, disp, new_words)
                 
     translated_grammar_sentence = " ".join(ptree.leaves())
     return translated_grammar_sentence, num_subs
+
 def translate_sentence_words(sentence, src_to_tgt_dictionary):
     words_list = []
 
@@ -111,14 +97,10 @@ def translate_sentence_words(sentence, src_to_tgt_dictionary):
 
 def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src_to_tgt_dictionary):
 
-    # Flag to check if there are trees in generator (grammar matched)
-    translated = False
-
     # translated sentence map with number of grammar substitution found
     trans_map = {} 
 
     for tree in list_trees:
-        translated = True
 
         # Translate grammar
         trans_gram_sentence, num_subs = translate_tree_grammar(tree, src_to_tgt_grammar)
@@ -128,11 +110,14 @@ def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src
         
         # Append to trans map
         trans_map[trans_lang_sentence] = num_subs
-
     # Return translation that has the most displacement    
     return max(trans_map, key=trans_map.get)
 
 def calculate_displacement(src_grammar, tgt_grammar):
+    """
+    Calcualte displacement between 2 grammar 
+    E.g: S -> A B C to S -> B C A has displacement of [1 2 0]
+    """
     src_grammar_lst = src_grammar.split()
     tgt_grammar_lst = tgt_grammar.split()
     
