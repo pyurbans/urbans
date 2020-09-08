@@ -1,16 +1,17 @@
 from typing import Dict, List
 from .utils.tree_manipulation import translate_trees_grammar
 from .utils.misc import remove_trailing_space
-import nltk 
+import nltk
 from nltk.parse.chart import BottomUpLeftCornerChartParser as Parser
 
 class Translator:
     """"""
-    def __init__(self, 
-                 src_grammar: str, 
-                 src_to_tgt_grammar: Dict, 
+    def __init__(self,
+                 src_grammar: str,
+                 src_to_tgt_grammar: Dict,
                  src_to_tgt_dictionary: Dict):
-        """Initialize the translator
+        """
+        Initialize the translator
         Args:
             src_grammar (str): source language grammar written in nltk style
             E.g: src_grammar = \"""
@@ -50,7 +51,8 @@ class Translator:
         return remove_trailing_space(txt)
 
     def translate(self, sentences: List[str] or str, allow_multiple_translation = False):
-        """Translate a list of sentences
+        """
+        Translate a list of sentences
         Args:
             sentences (List[str]): A list of str-typed sentences
         Returns:
@@ -61,7 +63,7 @@ class Translator:
 
         translated_sentences = []
         failed_sentences = []
-        
+
         for sentence in sentences:
             sentence = self.__process_text_input(sentence)
             trees = self.parser.parse(sentence.split())
