@@ -55,8 +55,8 @@ en_to_vi_dict = {
     }
 
 translator = Translator(src_grammar = src_grammar,
-                            src_to_tgt_grammar = src_to_target_grammar,
-                            src_to_tgt_dictionary = en_to_vi_dict)
+                        src_to_tgt_grammar = src_to_target_grammar,
+                        src_to_tgt_dictionary = en_to_vi_dict)
 
 trans_sentences = translator.translate(src_sentences) 
 # This should returns ['tôi yêu những chú_chó ngoan', 'tôi ghét những chú_chó hư']
