@@ -115,7 +115,6 @@ def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src
 
 def calculate_displacement(src_grammar, tgt_grammar):
     """Calculate displacement between 2 grammar. E.g: S -> A B C to S -> B C A has displacement of [1 2 0]"""
-    
     src_grammar_lst = src_grammar.split()
     tgt_grammar_lst = tgt_grammar.split()
     
