@@ -15,17 +15,17 @@
 
 </div>
 
-## Installation
+## ⚙️ Installation
 ```bash
 pip install urbamt
 ```
 
-## What good about URBaMT?
+## ✨ What is good about URBaMT?
 - Rule-based, deterministic translation; unlike Google Translate - giving only 1 non-deterministic result
 - Using NLTK parsing interface and is built on top of already-efficient NLTK backend
 - Can be used for data augmentation
 
-## Usage
+## 📖 Usage
 ```python
 from urbamt import Translator
 
@@ -67,10 +67,10 @@ trans_sentences = translator.translate(src_sentences)
 # This should returns ['tôi yêu những chú_chó ngoan', 'tôi ghét những chú_chó hư']
 ```
 
-## License
+## ⚖️ License
 This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/urbamt/urbamt/blob/master/LICENSE) as you wish.
 
-## BibTeX
+## ✍️ BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
 ```bibtex
 @misc{phat2020urbamt,
