@@ -19,12 +19,10 @@
 ```bash
 pip install urbamt
 ```
-## What is URBaMT?
-- URBaMT is a rule-based machine translation toolkit, which means you can use this tool to 
 
 ## What good about URBaMT?
 - Rule-based, deterministic translation; unlike Google Translate - giving only 1 non-deterministic result
-- Using NLTK parsing interface and is built on top of efficient NLTK backend
+- Using NLTK parsing interface and is built on top of already-efficient NLTK backend
 - Can be used for data augmentation
 
 ## Usage
