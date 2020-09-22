@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='urbamt',
-     version='0.0.1-b3',
+     version='0.0.1-b4',
      author="Patrick Phat Nguyen",
      author_email="me@patrickphat.com",
      description="URBaMT: Universal Rule-based Machine Translation Toolkit",
