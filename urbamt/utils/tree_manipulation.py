@@ -65,19 +65,25 @@ def translate_tree_grammar(tree: nltk.Tree, grammar_substitutions: dict):
     num_subs = 0
     # Convert tree to ParentedTree
     ptree = tree_to_ptree(tree)
-    # Traverse through subtrees
-    for sub in ptree.subtrees():
-        # Create grammar string from left-most node. E.g: NP -> JJ NP,
-        # in this case, JJ is left-most node
-        grammar_str = build_grammar_str_from_left_most(sub)
-        for src_grammar, tgt_grammar in grammar_substitutions.items():
-            if grammar_str == src_grammar:
-                # Increment number of substitutions
-                num_subs += 1
-                # Calculate displacement between 2 grammar strings
-                disp, new_words = calculate_displacement(src_grammar,tgt_grammar)
-                # Change tree nodes positions thanks to new displacement
-                swap_tree_given_left(sub, disp, new_words)
+    old_num_subs = -1
+
+    # Loops until there no substitution left
+    while num_subs != old_num_subs:
+        old_num_subs = num_subs
+        # Traverse through subtrees
+        for sub in ptree.subtrees():
+            # Create grammar string from left-most node. E.g: NP -> JJ NP,
+            # in this case, JJ is left-most node
+            grammar_str = build_grammar_str_from_left_most(sub)
+            for src_grammar, tgt_grammar in grammar_substitutions.items():
+                if grammar_str == src_grammar:
+                    # Increment number of substitutions
+                    num_subs += 1
+                    # Calculate displacement between 2 grammar strings
+                    disp, new_words = calculate_displacement(src_grammar,tgt_grammar)
+                    # Change tree nodes positions thanks to new displacement
+                    swap_tree_given_left(sub, disp, new_words)
+ 
                 
     translated_grammar_sentence = " ".join(ptree.leaves())
     return translated_grammar_sentence, num_subs
@@ -101,7 +107,6 @@ def translate_trees_grammar(list_trees: List[nltk.Tree], src_to_tgt_grammar, src
     trans_map = {}
 
     for tree in list_trees:
-
         # Translate grammar
         trans_gram_sentence, num_subs = translate_tree_grammar(tree, src_to_tgt_grammar)
 

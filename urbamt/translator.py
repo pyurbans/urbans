@@ -68,7 +68,9 @@ class Translator:
             sentence = self.__process_text_input(sentence)
             trees = self.parser.parse(sentence.split())
             list_trees = [tree for tree in trees]
-
+            if len(list_trees) == 0:
+                failed_sentences.append(sentence)
+                continue
             trans_sentence = translate_trees_grammar(list_trees, self.src_to_tgt_grammar, self.src_to_tgt_dictionary)
             translated_sentences.append(trans_sentence)
 
@@ -76,6 +78,6 @@ class Translator:
         failed_sentences = '\n'.join(failed_sentences)
 
         if len(failed_sentences) > 0:
-            raise ValueError(f"Please check your grammar again, failed to translated these sentence \n {failed_sentences}")
+            raise ValueError(f"Please check your grammar again, failed to parse these sentences: \n{failed_sentences}")
 
         return translated_sentences
