@@ -29,7 +29,7 @@ commands:
 
       
 jobs:
-  test_urbamt:
+  test_ruby:
     executor: python36-docker
     steps:
       - setup_test_translation_under_coverage
@@ -39,4 +39,4 @@ workflows:
   main:
     # Run the welcome/run job in its own container
     jobs:
-      - test_urbamt
+      - test_ruby
