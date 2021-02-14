@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-     name='urbamt',
-     version='0.0.1-b4',
-     author="Patrick Phat Nguyen",
+     name='ruby',
+     version='0.0.2',
+     author="Truong-Phat Nguyen",
      author_email="me@patrickphat.com",
-     description="URBaMT: Universal Rule-based Machine Translation Toolkit",
+     description="RUBY: Universal Rule-based Machine Translation NLP Toolkit",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     url="https://github.com/urbamt/urbamt",
+     url="https://github.com/nlp-ruby/ruby",
      packages=setuptools.find_packages(exclude=['docs', 'tests', 'experiments']),
      classifiers=[
          "Programming Language :: Python :: 3",
