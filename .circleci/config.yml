@@ -28,7 +28,7 @@ commands:
 
       
 jobs:
-  test_ruby:
+  test_urbans:
     executor: python36-docker
     steps:
       - setup_test_translation_under_coverage
@@ -38,4 +38,4 @@ workflows:
   main:
     # Run the welcome/run job in its own container
     jobs:
-      - test_ruby
+      - test_urbans
