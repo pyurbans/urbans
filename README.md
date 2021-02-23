@@ -76,7 +76,7 @@ If you wish to cite the framework feel free to use this (but only if you loved i
 @misc{phat2020urbans,
   author = {Truong-Phat Nguyen},
   title = {URBANS: Universal Rule-Based Machine Translation NLP toolkit},
-  year = {2020},
+  year = {2021},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/pyurbans/urbans}},
