@@ -5,13 +5,13 @@
 
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
-[![CircleCI](https://circleci.com/gh/urbans/urbans/tree/master.svg?style=svg)](https://circleci.com/gh/urbans/urbans/tree/master)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbans/urbans?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=urbans/urbans&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbans/urbans?utm_source=github.com&utm_medium=referral&utm_content=urbans/urbans&utm_campaign=Badge_Coverage)
+[![CircleCI](https://circleci.com/gh/pyurbans/urbans/tree/master.svg?style=svg)](https://circleci.com/gh/pyurbans/urbans/tree/master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/pyurbans/urbans?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pyurbans/urbans&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/pyurbans/urbans?utm_source=github.com&utm_medium=referral&utm_content=pyurbans/urbans&utm_campaign=Badge_Coverage)
 [![PyPI version](https://badge.fury.io/py/urbans.svg)](https://badge.fury.io/py/urbans)
-[![GitHub release](https://img.shields.io/github/release/urbans/urbans.svg)](https://GitHub.com/urbans/urbans/releases/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbans/urbans/graphs/commit-activity)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbans/urbans/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/pyurbans/urbans.svg)](https://GitHub.com/pyurbans/urbans/releases/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/pyurbans/urbans/graphs/commit-activity)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/pyurbans/urbans/blob/master/LICENSE)
 
 </div>
 
@@ -68,7 +68,7 @@ trans_sentences = translator.translate(src_sentences)
 ```
 
 ## ⚖️ License
-This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/urbans/urbans/blob/master/LICENSE) as you wish.
+This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/pyurbans/urbans/blob/master/LICENSE) as you wish.
 
 ## ✍️ BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
@@ -79,7 +79,7 @@ If you wish to cite the framework feel free to use this (but only if you loved i
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/urbans/urbans}},
+  howpublished = {\url{https://github.com/pyurbans/urbans}},
 }
 ```
 
