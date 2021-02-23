@@ -1,33 +1,33 @@
 <div align="center">
 
-# RUBY: Universal Rule-Based Machine Translation toolkit 
+# URBANS: Universal Rule-Based Machine Translation toolkit 
 **A tool for translating text from source grammar to target grammar (context-free) with corresponding dictionary.**
 
 *Why not translate it yourself when Google Translate cannot satisfy you❓*
 
-[![CircleCI](https://circleci.com/gh/nlp-ruby/ruby/tree/master.svg?style=svg)](https://circleci.com/gh/nlp-ruby/ruby/tree/master)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/nlp-ruby/ruby?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nlp-ruby/ruby&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/nlp-ruby/ruby?utm_source=github.com&utm_medium=referral&utm_content=nlp-ruby/ruby&utm_campaign=Badge_Coverage)
-[![PyPI version](https://badge.fury.io/py/ruby.svg)](https://badge.fury.io/py/ruby)
-[![GitHub release](https://img.shields.io/github/release/nlp-ruby/ruby.svg)](https://GitHub.com/nlp-ruby/ruby/releases/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/nlp-ruby/ruby/graphs/commit-activity)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/nlp-ruby/ruby/blob/master/LICENSE)
+[![CircleCI](https://circleci.com/gh/urbans/urbans/tree/master.svg?style=svg)](https://circleci.com/gh/urbans/urbans/tree/master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbans/urbans?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=urbans/urbans&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b4937f1f9fe0477b9fc557cbedf92b24)](https://www.codacy.com/gh/urbans/urbans?utm_source=github.com&utm_medium=referral&utm_content=urbans/urbans&utm_campaign=Badge_Coverage)
+[![PyPI version](https://badge.fury.io/py/urbans.svg)](https://badge.fury.io/py/urbans)
+[![GitHub release](https://img.shields.io/github/release/urbans/urbans.svg)](https://GitHub.com/urbans/urbans/releases/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/urbans/urbans/graphs/commit-activity)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/urbans/urbans/blob/master/LICENSE)
 
 </div>
 
 ## ⚙️ Installation
 ```bash
-pip install ruby
+pip install urbans
 ```
 
-## ✨ What is good about RUBY?
+## ✨ What is good about urbans?
 - Rule-based, deterministic translation; unlike Google Translate - giving only 1 non-deterministic result
 - Using NLTK parsing interface and is built on top of already-efficient NLTK backend
 - Can be used for data augmentation
 
 ## 📖 Usage
 ```python
-from ruby import Translator
+from urbans import Translator
 
 # Source sentence to be translated
 src_sentences = ["I love good dogs", "I hate bad dogs"]
@@ -68,18 +68,18 @@ trans_sentences = translator.translate(src_sentences)
 ```
 
 ## ⚖️ License
-This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/nlp-ruby/ruby/blob/master/LICENSE) as you wish.
+This repository is using the Apache 2.0 license that is listed in the repo. Please take a look at [`LICENSE`](https://github.com/urbans/urbans/blob/master/LICENSE) as you wish.
 
 ## ✍️ BibTeX
 If you wish to cite the framework feel free to use this (but only if you loved it 😊):
 ```bibtex
-@misc{phat2020ruby,
+@misc{phat2020urbans,
   author = {Truong-Phat Nguyen},
-  title = {RUBY: Universal Rule-Based Machine Translation NLP toolkit},
+  title = {URBANS: Universal Rule-Based Machine Translation NLP toolkit},
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/nlp-ruby/ruby}},
+  howpublished = {\url{https://github.com/urbans/urbans}},
 }
 ```
 
