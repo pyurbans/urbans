@@ -1,5 +1,5 @@
 from pytest import fixture, skip
-from ruby import Translator
+from urbans import Translator
 
 
 def test_multi_input():
