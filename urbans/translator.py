@@ -58,8 +58,6 @@ class Translator:
         Returns:
             List[str]: A list of translated sentences
         """
-        if isinstance(sentences,str):
-            sentences = [sentences]
 
         translated_sentences = []
         failed_sentences = []
