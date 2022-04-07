@@ -6,7 +6,7 @@ from nltk.parse.chart import BottomUpLeftCornerChartParser as Parser
 
 class Translator:
     """"""
-    def __init__(self,
+    def _init__(self,
                  src_grammar: str,
                  src_to_tgt_grammar: Dict,
                  src_to_tgt_dictionary: Dict):
