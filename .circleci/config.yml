@@ -6,7 +6,7 @@ orbs:
 executors:
   python36-docker:
     docker:
-      - image: circleci/python:3.6.10
+      - image: cimg/python:3.6.10
     resource_class: medium
 
 commands:
